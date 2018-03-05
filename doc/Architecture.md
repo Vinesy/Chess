@@ -3,7 +3,7 @@ The game of Chess
 What makes a good design for the game of chess?  Chess at its basic form is a board game.  A good design could easily be modified to work for any board game.  A board game consists of a physical board containing the state of the game being played.  There are 1 to many players in a board game.  Players take turns changing the state of the board until an end state has been achieved.  Sometimes players can choose from many options when changing the state of the board.  Other times they follow a more simplistic rails approach, like rolling dice, or drawing a card.  Pieces on the board move based on a set of rules that are affected by the state of the board.  Sometimes there is only one set rules for all pieces.  Sometimes the rules are different for every piece on the board.
 
 Application of a board game to chess.
-
+## Talk about REST.  Other frameworks besides MVC.  What would C do?
 The Board (The View)
 	8x8 Matrix of alternating black and white.
 	Always starts at the same initial state.
