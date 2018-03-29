@@ -14,7 +14,7 @@ The Board (The View)
 
 The Pieces (The Model)
 	Each type of Piece on the board can only move in specific ways.
-	Sometimes the condition of the board dicates that a piece cant move.
+	Sometimes the condition of the board dictates that a piece cant move.
 		(two pawns can get stuck with no passing option)
 	Sometimes a special move can be made if certain conditions are met.
 		( A king can castle as long as he and the rook hasn't moved yet)
@@ -29,12 +29,12 @@ The Ruleset (The Controller)
 
 The Controller starts a new game.  This creates each piece needed by the game and places them on the board.  Each piece when created sets a flag that they have never moved.  You could create 8 pawns and pass in the initial position of the pawns.  
 
-	Pawn pawn1 = new Pawn(2A) // Pawn created at postion 2A
+	Pawn pawn1 = new Pawn(2A) // Pawn created at position 2A
   
 Or you could object out each pawn to a specific pawn type.
 
  	Pawn pawn1 = new BlackPawn1();
 	
-I will have to think more of what the pro's and cons of this would be.  In the context of the bishops, each player has both a white tile and a black tile bishop.  From a software standpoint though it isn't required to call out which is which.  As long as each bishop starts on the proper tile, the algorithm x = y will dicate how the bishop can move.
+I will have to think more of what the pro's and cons of this would be.  In the context of the bishops, each player has both a white tile and a black tile bishop.  From a software standpoint though it isn't required to call out which is which.  As long as each bishop starts on the proper tile, the algorithm x = y will dictate how the bishop can move.
 
-The simplest solution would be to have an 8x8 Matrix of chess pieces, where the array is initialized to the starting position of each piece.  Empty cells with no pieces are null.  Pieces don't need to store their position.  Positions are all maintained by the controller.  The controller can query pieces agaist positions.  This can be further expossed later on to show additional information in the view, like highlighting where a piece can go.  
+The simplest solution would be to have an 8x8 Matrix of chess pieces, where the array is initialized to the starting position of each piece.  Empty cells with no pieces are null.  Pieces don't need to store their position.  Positions are all maintained by the controller.  The controller can query pieces against positions.  This can be further exposed later on to show additional information in the view, like highlighting where a piece can go.

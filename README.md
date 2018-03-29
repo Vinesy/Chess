@@ -1,5 +1,5 @@
 # Chess
-Praticing my OO Design skills.
+Practicing my OO Design skills.
 
 The goal of this is to work things out in my head and come up with a simple OO design pattern for the game of chess.  I will not be looking to web to try to copy or re-use any existing design paradigms.  The game will have user input and hooks for visual components.  It will probably be MVC heavy.  There are no plans for having a computer based player at this time.
 
