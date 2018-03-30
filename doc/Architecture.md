@@ -44,10 +44,11 @@ The simplest solution would be to have an 8x8 Matrix of chess pieces, where the 
 The current implementation focus's only on the model.  I have decided that there will be a dedicated Model.class that will be the only interface to packages outside of the model.  This class is ultimately a superset of the chess board and chess pieces.  The model will create a new chessboard, and that chessboard will create an array chesspieces that mimic the board layout.  If there is no chess piece in a position, then that position just contains a null pointer to a piece.  Each Chesspiece is contructed with a Team (white|black) and also a pointer to the chessboard (more on that decision later).
 
 Each piece once contructed, knows what team it is on and that is it.  Pieces where designed in a way that they do not keep track of their position in space.  Instead each peice is its own model.  You can pass a piece a position, and it will tell you all the possible moves that piece can make.  It does this by running through an algorithm based on that pieces rules, and makes sure its next move is one of several positions that is:
-  A) a valid position on the board
-  B) is not a position held by another team member
-  C) can be a position held by an enemy, but stopping movement in that direction. ( A Rook can not move past an enemy position)
-  D) Any special moves that are unique to a piece such as En Passant, or Castling
+
+	A) a valid position on the board
+	B) is not a position held by another team member
+	C) can be a position held by an enemy, but stopping movement in that direction. ( A Rook can not move past an enemy position)
+	D) Any special moves that are unique to a piece such as En Passant, or Castling
 
 The reason for this list of possible moves to be returned is that this list can be used to add context to a view when a piece is selected to make its next move.  I also want to run tests where I see how long it will take the program to calculate every possible board move.  If I make the Pieces aware of their current position, they are just storing that information for no reason.  The Board still needs to know their position, and they still need the board to look up other pieces that affect their play.
 
